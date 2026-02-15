@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Offline - AI Palm Reader</title>
+  <meta name="theme-color" content="#1a1a2e">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .offline-container {
+      text-align: center;
+      max-width: 400px;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .offline-icon {
+      font-size: 80px;
+      margin-bottom: 24px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .offline-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #a855f7, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .offline-message {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .retry-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 500;
+      color: white;
+      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+    }
+
+    .retry-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(139, 92, 246, 0.5);
+    }
+
+    .retry-button:active {
+      transform: translateY(0);
+    }
+
+    .cosmic-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .tips {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tips-title {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 12px;
+    }
+
+    .tips-list {
+      list-style: none;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: left;
+    }
+
+    .tips-list li {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tips-list li::before {
+      content: '✦';
+      color: #a855f7;
+    }
+  </style>
+</head>
+<body>
+  <div class="cosmic-bg" id="cosmicBg"></div>
+  
+  <div class="offline-container">
+    <div class="offline-icon">🔮</div>
+    <h1 class="offline-title">You're Offline</h1>
+    <p class="offline-message">
+      The cosmic connection seems disrupted. Please check your internet connection to continue your spiritual journey.
+    </p>
+    <button class="retry-button" onclick="window.location.reload()">
+      <span>↻</span>
+      <span>Try Again</span>
+    </button>
+    
+    <div class="tips">
+      <p class="tips-title">While you wait:</p>
+      <ul class="tips-list">
+        <li>Take a deep breath and center yourself</li>
+        <li>Reflect on your intentions</li>
+        <li>Check your Wi-Fi or mobile data</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Create stars
+    const cosmicBg = document.getElementById('cosmicBg');
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.width = Math.random() * 3 + 1 + 'px';
+      star.style.height = star.style.width;
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 2 + 's';
+      cosmicBg.appendChild(star);
+    }
+
+    // Auto retry every 30 seconds
+    setInterval(() => {
+      fetch('/', { method: 'HEAD', cache: 'no-store' })
+        .then(() => window.location.reload())
+        .catch(() => {});
+    }, 30000);
+  </script>
+</body>
+    </html>
