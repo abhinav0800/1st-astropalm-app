@@ -1,0 +1,120 @@
+{
+  "name": "AI Palm Reader – Tarot & Astrology Guidance",
+  "short_name": "Palm Reader",
+  "description": "Discover insights through AI-powered palm reading, tarot cards, and daily horoscope guidance. A premium cosmic experience.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1a1a2e",
+  "background_color": "#0f0f1a",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["lifestyle", "entertainment", "utilities"],
+  "iarc_rating_id": "",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home Dashboard"
+    },
+    {
+      "src": "/screenshots/palm.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Palm Reading Analysis"
+    },
+    {
+      "src": "/screenshots/tarot.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tarot Card Reading"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Palm Scan",
+      "short_name": "Palm",
+      "description": "Scan your palm for AI reading",
+      "url": "/?screen=palm-scan",
+      "icons": [{ "src": "/icons/shortcut-palm.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Daily Guidance",
+      "short_name": "Guidance",
+      "description": "Get your daily spiritual guidance",
+      "url": "/?screen=daily-guidance",
+      "icons": [{ "src": "/icons/shortcut-guidance.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Tarot Reading",
+      "short_name": "Tarot",
+      "description": "Draw tarot cards for insight",
+      "url": "/?screen=tarot",
+      "icons": [{ "src": "/icons/shortcut-tarot.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
