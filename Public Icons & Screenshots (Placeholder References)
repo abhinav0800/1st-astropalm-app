@@ -1,0 +1,19 @@
+public/
+├── favicon.ico            (32x32 favicon)
+├── apple-touch-icon.png   (180x180 iOS icon)
+├── icons/
+│   ├── icon-72x72.png
+│   ├── icon-96x96.png
+│   ├── icon-128x128.png
+│   ├── icon-144x144.png
+│   ├── icon-152x152.png
+│   ├── icon-192x192.png   (Required for PWA)
+│   ├── icon-384x384.png
+│   ├── icon-512x512.png   (Required for PWA)
+│   ├── shortcut-palm.png
+│   ├── shortcut-guidance.png
+│   └── shortcut-tarot.png
+├── screenshots/
+│   ├── home.png           (1080x1920)
+│   ├── palm.png           (1080x1920)
+│   └── tarot.png          (1080x1920)
