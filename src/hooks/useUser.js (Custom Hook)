@@ -1,0 +1,9 @@
+import { useUser as useUserContext } from '../context/UserContext';
+
+export const useUser = () => {
+  const context = useUserContext();
+  if (context === undefined) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+  return context;
+};
