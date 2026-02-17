@@ -1,0 +1,6 @@
+.feature-card {
+  background: var(--glass-bg); padding: 16px; border-radius: 20px;
+  text-align: center; border: 1px solid var(--glass-border);
+}
+.feature-icon { font-size: 32px; margin-bottom: 8px; }
+.feature-card h3 { font-size: 14px; color: var(--text-secondary); }
