@@ -1,0 +1,14 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 32px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--gradient-accent); color: white; }
+.btn-secondary { background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); }
+.btn:active { transform: scale(0.95); }
