@@ -1,0 +1,8 @@
+.splash-screen {
+  height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: var(--gradient-cosmic);
+}
+.splash-title {
+  font-family: var(--font-heading); font-size: 2.5rem;
+  background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
