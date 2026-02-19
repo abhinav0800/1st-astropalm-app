@@ -1,0 +1,8 @@
+# Pehle sab files add karo
+git add .
+
+# Commit karo
+git commit -m "Fix AppContext import issue"
+
+# Push karo
+git push origin main
