@@ -1,0 +1,12 @@
+# 1. File ko temporary naam de dein
+git mv src/context/AppContext.jsx src/context/temp.jsx
+
+# 2. Ab isse sahi naam (Capital A) ke saath rename karein
+git mv src/context/temp.jsx src/context/AppContext.jsx
+
+# 3. Commit karein
+git add .
+git commit -m "Fixing case sensitivity for Vercel"
+
+# 4. GitHub par push karein
+git push origin main
