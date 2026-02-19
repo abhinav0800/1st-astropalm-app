@@ -1,0 +1,2 @@
+.chat-messages { scrollbar-width: none; }
+.chat-messages::-webkit-scrollbar { display: none; }
