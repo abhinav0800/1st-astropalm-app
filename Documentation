@@ -1,0 +1,12 @@
+# AI Palm Reader Production Build
+
+## Deployment Instructions
+1. Install dependencies: `npm install`
+2. Configure API Key in `.env`
+3. Build Project: `npm run build`
+4. Deploy `dist/` folder to Vercel/Netlify.
+
+## Compliance
+- Play Store Safe: Yes
+- Privacy Policy Included: Yes
+- Symbolic Reading Disclaimer: Yes
